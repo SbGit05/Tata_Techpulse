@@ -1,0 +1,68 @@
+Q01 PASS sources H01,H02,K02 mode evidence
+Q02 PASS sources H02 mode evidence
+Q03 PASS sources H03,H04 mode evidence
+Q04 PASS sources H04,H03 mode evidence
+Q05 PASS sources H05 mode evidence
+Q06 PASS sources H06 mode evidence
+Q07 PASS sources H07 mode evidence
+Q08 PASS sources H08 mode evidence
+Q09 PASS sources H09 mode evidence
+Q10 PASS sources H10 mode evidence
+Q11 PASS sources H11 mode evidence
+Q12 PASS sources H12 mode evidence
+Q13 PASS sources K01 mode evidence
+Q14 PASS sources K02 mode evidence
+Q15 PASS sources K03 mode evidence
+Q16 PASS sources K04 mode evidence
+Q17 PASS sources K05 mode evidence
+Q18 PASS sources K06 mode evidence
+Q19 PASS sources K07 mode evidence
+Q20 PASS sources K08 mode evidence
+Q21 PASS sources K09 mode evidence
+Q22 PASS sources K10 mode evidence
+Q23 PASS sources  mode evidence
+Q24 PASS sources  mode evidence
+Q25 PASS sources  mode evidence
+Q26 PASS sources K08 mode evidence
+{
+  "run_at_utc": "2026-10-11T17:43:40.370060+00:00",
+  "mode_requested": "evidence",
+  "questions": 26,
+  "in_scope": 22,
+  "out_of_scope": 4,
+  "passed": 26,
+  "failed": 0,
+  "retrieval_hit_at_3_percent": 100.0,
+  "abstention_accuracy_percent": 100.0,
+  "in_scope_answer_rate_percent": 100.0,
+  "citation_id_validity_percent": 100.0,
+  "latency_p50_ms": 0.201,
+  "latency_p95_ms": 0.368,
+  "llm_generated_answers": 0,
+  "llm_status": {
+    "available": false,
+    "model": "qwen2.5:1.5b-instruct-q4_K_M",
+    "reason": "Local Ollama endpoint unavailable"
+  },
+  "configuration_sha256": "07e3fbaaa43b2324cb9fc7d4a5b5dea164fb5fec0d22a443f1b1aaa0e645ea8d",
+  "prompt_sha256": "4316afe1c017be716aba25f0fe3b447d27781205a5b65c5dabb006609e963149",
+  "claim_faithfulness": "NOT_EXPERT_ASSESSED",
+  "limitations": [
+    "Authored small synthetic corpus; no independent safety expert labels",
+    "Queries not used to fit vectorizer or select threshold",
+    "Citation ID validity does not prove model faithfulness",
+    "No production safety, time-saving or compliance claims"
+  ],
+  "corpus_sha256": "5099c1d2c3bd65c4087f99a8b34abaf5005905ee95924d5009cd2cf5e6509bfe",
+  "question_set_sha256": "3fda635354aeff26c5c45d5cdda65ecf171ffe8d5c277734e26fdf8cfe4750de",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "packages": {
+      "Flask": "3.1.3",
+      "numpy": "2.3.5",
+      "scikit-learn": "1.8.0",
+      "faiss-cpu": "1.15.1"
+    }
+  }
+}

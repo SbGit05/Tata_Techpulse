@@ -1,0 +1,17 @@
+test_abstention (__main__.WorkflowTests.test_abstention) ... ok
+test_certification_block (__main__.WorkflowTests.test_certification_block) ... ok
+test_change_invalidates_review (__main__.WorkflowTests.test_change_invalidates_review) ... ok
+test_citations (__main__.WorkflowTests.test_citations) ... ok
+test_create_and_review (__main__.WorkflowTests.test_create_and_review) ... ok
+test_db_persistence (__main__.WorkflowTests.test_db_persistence) ... ok
+test_gap_blocks_review (__main__.WorkflowTests.test_gap_blocks_review) ... ok
+test_invalid_ratings (__main__.WorkflowTests.test_invalid_ratings) ... ok
+test_quality (__main__.WorkflowTests.test_quality) ... ok
+test_rejection_logged (__main__.WorkflowTests.test_rejection_logged) ... ok
+test_risk_boundaries (__main__.WorkflowTests.test_risk_boundaries) ... ok
+test_validation (__main__.WorkflowTests.test_validation) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.078s
+
+OK

@@ -1,0 +1,57 @@
+{
+  "reviewer": "ChatGPT / Codex",
+  "review_kind": "Assistant content and implementation review; not student or faculty approval",
+  "review_date": "2026-10-11",
+  "reviewed_outputs": {
+    "evidence_answers": 26,
+    "local_qwen_answers_and_refusals": 26
+  },
+  "findings": [
+    {
+      "id": "R01",
+      "question": "Q18",
+      "severity": "content error",
+      "finding": "The generated answer incorrectly expands FSR as failure safety requirements and TSR as traffic safety requirements. Correct terms are functional safety requirements and technical safety requirements.",
+      "action": "Retain original measured answer; mark assistant content review NEEDS_CORRECTION. Evidence mode gives correct source text. No claim of expert validation."
+    },
+    {
+      "id": "R02",
+      "question": "Q08",
+      "severity": "incomplete answer",
+      "finding": "Generated answer mentions diagnosis within 50 ms but omits the source test criterion of alternate-channel activation within 100 ms.",
+      "action": "Use the complete cited H08 verification statement for demonstration; record incomplete coverage."
+    },
+    {
+      "id": "R03",
+      "question": "Q01/Q03/Q04",
+      "severity": "citation precision",
+      "finding": "Some generated answers include valid but unnecessary adjacent source IDs.",
+      "action": "Citation membership passes do not establish minimal or claim-specific citations."
+    }
+  ],
+  "automated_metrics_unchanged": true,
+  "student_verified": false,
+  "faculty_approved": false,
+  "contributions": [
+    {
+      "work_area": "Dataset and source review",
+      "record": "Codex authored 22 synthetic records and reviewed cited outputs. Student supplied CS2 scope; personal source review pending."
+    },
+    {
+      "work_area": "Implementation changes",
+      "record": "Codex implemented Flask UI, retrieval, local Qwen integration, HARA templates, SQLite review and export. Student edits not recorded."
+    },
+    {
+      "work_area": "Local execution and model setup",
+      "record": "Codex installed and ran dependencies and Qwen in the preparation environment. Student-machine execution pending."
+    },
+    {
+      "work_area": "Evaluation and output checking",
+      "record": "Codex ran 26 tests and two 26-question evaluations; reviewed all recorded answers and identified Q18 terminology error. Student review pending."
+    },
+    {
+      "work_area": "Report and demonstration preparation",
+      "record": "Codex drafted and checked documents and captured UI evidence. Student supplied identity/contact details and repository; video excluded."
+    }
+  ]
+}

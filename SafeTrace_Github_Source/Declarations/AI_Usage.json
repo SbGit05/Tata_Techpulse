@@ -1,0 +1,31 @@
+{
+  "tool": "ChatGPT/Codex",
+  "purpose": "Substantial assistance generating synthetic data, application code, tests, configuration, documentation and submission forms; automated execution and document layout checks",
+  "student_verified": false,
+  "note": "The submitting student must personally review and understand the artifacts before marking verified and signing. No claim of no AI usage is made.",
+  "assistant_review_completed": true,
+  "assistant_review_record": "Evaluation_Results/assistant_output_review.json",
+  "actual_contributions": [
+    {
+      "work_area": "Dataset and source review",
+      "record": "Codex authored 22 synthetic records and reviewed cited outputs. Student supplied CS2 scope; personal source review pending."
+    },
+    {
+      "work_area": "Implementation changes",
+      "record": "Codex implemented Flask UI, retrieval, local Qwen integration, HARA templates, SQLite review and export. Student edits not recorded."
+    },
+    {
+      "work_area": "Local execution and model setup",
+      "record": "Codex installed and ran dependencies and Qwen in the preparation environment. Student-machine execution pending."
+    },
+    {
+      "work_area": "Evaluation and output checking",
+      "record": "Codex ran 26 tests and two 26-question evaluations; reviewed all recorded answers and identified Q18 terminology error. Student review pending."
+    },
+    {
+      "work_area": "Report and demonstration preparation",
+      "record": "Codex drafted and checked documents and captured UI evidence. Student supplied identity/contact details and repository; video excluded."
+    }
+  ],
+  "content_findings_pending": true
+}

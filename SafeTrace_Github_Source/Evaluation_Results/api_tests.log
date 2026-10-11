@@ -1,0 +1,14 @@
+test_full_workflow (__main__.ApiTests.test_full_workflow) ... ok
+test_gets (__main__.ApiTests.test_gets) ... ok
+test_host_block (__main__.ApiTests.test_host_block) ... ok
+test_invalid_query (__main__.ApiTests.test_invalid_query) ... ok
+test_json_required (__main__.ApiTests.test_json_required) ... ok
+test_object_required (__main__.ApiTests.test_object_required) ... ok
+test_origin_block (__main__.ApiTests.test_origin_block) ... ok
+test_oversized (__main__.ApiTests.test_oversized) ... ok
+test_unknown_case (__main__.ApiTests.test_unknown_case) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.036s
+
+OK

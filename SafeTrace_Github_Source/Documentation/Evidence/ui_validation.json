@@ -1,0 +1,14 @@
+{
+  "javascript_errors": [],
+  "scenarios": [
+    "cited answer",
+    "create assessment",
+    "traceability chain",
+    "demo student-review record",
+    "update invalidates review",
+    "evaluation tab",
+    "input knowledge",
+    "out-of-scope refusal"
+  ],
+  "result": "PASS"
+}

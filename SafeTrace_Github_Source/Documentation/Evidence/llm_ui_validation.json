@@ -1,0 +1,6 @@
+{
+  "response_mode": "QWEN DRAFT",
+  "answer": "When braking torque is lost on a highway approach, insufficient deceleration and a rear-end collision hazard can occur. [H01] [H02] [K02]",
+  "meta": "PENDING_REVIEW \u2022 10924.448 ms \u2022 Citations: H01, H02, K02",
+  "result": "PASS"
+}

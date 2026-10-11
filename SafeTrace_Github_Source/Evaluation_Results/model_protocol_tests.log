@@ -1,0 +1,10 @@
+test_malformed_json_falls_back (__main__.ModelProtocolTests.test_malformed_json_falls_back) ... ok
+test_model_unavailable_falls_back (__main__.ModelProtocolTests.test_model_unavailable_falls_back) ... ok
+test_no_citations_falls_back (__main__.ModelProtocolTests.test_no_citations_falls_back) ... ok
+test_unknown_citation_falls_back (__main__.ModelProtocolTests.test_unknown_citation_falls_back) ... ok
+test_valid_structured_ids (__main__.ModelProtocolTests.test_valid_structured_ids) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.031s
+
+OK

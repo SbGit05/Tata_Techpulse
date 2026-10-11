@@ -1,0 +1,1033 @@
+[
+  {
+    "id": "Q01",
+    "query": "What happens when braking torque is lost on a highway approach?",
+    "expected_source": "H01",
+    "expected_abstain": false,
+    "output": {
+      "query": "What happens when braking torque is lost on a highway approach?",
+      "requested_mode": "llm",
+      "mode": "llm",
+      "evidence": [
+        {
+          "id": "H01",
+          "title": "Electronic braking - Loss of braking torque",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "hazards.json",
+          "section": "H01",
+          "text": "Item: Electronic braking. Malfunction: Loss of braking torque. Scenario: Highway approach to slow traffic. Hazard: Insufficient deceleration and rear-end collision. Safety goal: Prevent loss of commanded braking torque. FSR: The braking controller shall detect inconsistent brake actuator feedback and request the defined degraded mode within 100 ms. TSR: The feedback monitor shall compare commanded and measured torque every 10 ms and flag a mismatch lasting 50 ms. Verification: Inject missing actuator feedback and verify degraded-mode request within 100 ms. All thresholds and ratings are synthetic examples, not validated vehicle limits.",
+          "score": 0.384422
+        },
+        {
+          "id": "H02",
+          "title": "Electronic braking - Unintended braking",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "hazards.json",
+          "section": "H02",
+          "text": "Item: Electronic braking. Malfunction: Unintended braking. Scenario: Dry highway with following traffic. Hazard: Unexpected deceleration and following-vehicle collision. Safety goal: Prevent unintended braking torque. FSR: The braking controller shall reject a brake torque command that fails plausibility checks within 100 ms. TSR: The command monitor shall check range and pedal correlation every 10 ms. Verification: Inject an out-of-range torque request and verify command rejection within 100 ms. All thresholds and ratings are synthetic examples, not validated vehicle limits.",
+          "score": 0.253785
+        },
+        {
+          "id": "K02",
+          "title": "Hazard and hazardous event",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "knowledge.json",
+          "section": "K02",
+          "text": "A hazard describes potential harm caused by malfunctioning behaviour. A hazardous event combines the hazard with an operational situation. Loss of braking during a highway approach is different from the same malfunction while parked. Operational context must accompany each assessment.",
+          "score": 0.181465
+        }
+      ],
+      "review_status": "PENDING_REVIEW",
+      "abstained": false,
+      "citation_ids": [
+        "H01"
+      ],
+      "model_used": "qwen2.5:1.5b-instruct-q4_K_M",
+      "answer": "When braking torque is lost on a highway approach, it results in insufficient deceleration and a risk of rear-end collision. [H01]",
+      "model_attempt": {
+        "raw_answer": "When braking torque is lost on a highway approach, it results in insufficient deceleration and a risk of rear-end collision. [H01]",
+        "citation_validation": "VALID_IDS_ONLY"
+      },
+      "faithfulness": "UNVERIFIED_DRAFT",
+      "model_timing_ns": 1523994000,
+      "latency_ms": 13900.327
+    },
+    "retrieval_hit": true,
+    "citation_id_valid": true,
+    "passed": true
+  },
+  {
+    "id": "Q02",
+    "query": "How can the system reject unintended braking requests?",
+    "expected_source": "H02",
+    "expected_abstain": false,
+    "output": {
+      "query": "How can the system reject unintended braking requests?",
+      "requested_mode": "llm",
+      "mode": "evidence",
+      "evidence": [
+        {
+          "id": "H02",
+          "title": "Electronic braking - Unintended braking",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "hazards.json",
+          "section": "H02",
+          "text": "Item: Electronic braking. Malfunction: Unintended braking. Scenario: Dry highway with following traffic. Hazard: Unexpected deceleration and following-vehicle collision. Safety goal: Prevent unintended braking torque. FSR: The braking controller shall reject a brake torque command that fails plausibility checks within 100 ms. TSR: The command monitor shall check range and pedal correlation every 10 ms. Verification: Inject an out-of-range torque request and verify command rejection within 100 ms. All thresholds and ratings are synthetic examples, not validated vehicle limits.",
+          "score": 0.392047
+        }
+      ],
+      "review_status": "PENDING_REVIEW",
+      "abstained": false,
+      "citation_ids": [
+        "H02"
+      ],
+      "model_used": null,
+      "answer": "[H02] Item: Electronic braking. Malfunction: Unintended braking. Scenario: Dry highway with following traffic. Hazard: Unexpected deceleration and following-vehicle collision. Safety goal: Prevent unintended braking torque. FSR: The braking controller shall reject a brake torque command that fails plausibility checks within 100 ms. TSR: The command monitor shall check range and pedal correlation every 10 ms. Verification: Inject an out-of-range torque request and verify command rejection within 100 ms. All thresholds and ratings are synthetic examples, not validated vehicle limits.",
+      "model_attempt": {
+        "raw_answer": "The system can reject unintended braking requests by implementing plausibility checks on the brake torque command within 100 milliseconds. Additionally, the command monitor checks the range and pedal correlation every 10 milliseconds to ensure the command is within acceptable parameters.",
+        "citation_validation": "PENDING"
+      },
+      "fallback_reason": "Local model failed or citation validation failed: ValueError. Evidence mode returned instead.",
+      "latency_ms": 4257.957
+    },
+    "retrieval_hit": true,
+    "citation_id_valid": true,
+    "passed": false
+  },
+  {
+    "id": "Q03",
+    "query": "What warning is required for steering assistance loss during parking?",
+    "expected_source": "H03",
+    "expected_abstain": false,
+    "output": {
+      "query": "What warning is required for steering assistance loss during parking?",
+      "requested_mode": "llm",
+      "mode": "llm",
+      "evidence": [
+        {
+          "id": "H03",
+          "title": "Electric power steering - Loss of steering assistance",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "hazards.json",
+          "section": "H03",
+          "text": "Item: Electric power steering. Malfunction: Loss of steering assistance. Scenario: Low speed parking manoeuvre. Hazard: Increased steering effort and contact with obstacle. Safety goal: Maintain controllable steering during assistance loss. FSR: The steering controller shall indicate assistance loss to the driver within 500 ms. TSR: The diagnostic monitor shall detect missing assist motor feedback within 100 ms. Verification: Disconnect motor feedback and verify driver indication within 500 ms. All thresholds and ratings are synthetic examples, not validated vehicle limits.",
+          "score": 0.473953
+        },
+        {
+          "id": "H04",
+          "title": "Electric power steering - Unintended steering torque",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "hazards.json",
+          "section": "H04",
+          "text": "Item: Electric power steering. Malfunction: Unintended steering torque. Scenario: Highway lane keeping. Hazard: Lane departure and collision. Safety goal: Prevent unintended steering torque. FSR: The steering controller shall disable assistance on a confirmed torque plausibility fault within 50 ms. TSR: The torque monitor shall compare two independent sensor channels every 5 ms. Verification: Inject a torque sensor disagreement and verify assistance disable within 50 ms. All thresholds and ratings are synthetic examples, not validated vehicle limits.",
+          "score": 0.189913
+        }
+      ],
+      "review_status": "PENDING_REVIEW",
+      "abstained": false,
+      "citation_ids": [
+        "H03"
+      ],
+      "model_used": "qwen2.5:1.5b-instruct-q4_K_M",
+      "answer": "During low speed parking manoeuvres, a warning of increased steering effort and contact with obstacles is required to alert the driver. [H03]",
+      "model_attempt": {
+        "raw_answer": "During low speed parking manoeuvres, a warning of increased steering effort and contact with obstacles is required to alert the driver. [H03]",
+        "citation_validation": "VALID_IDS_ONLY"
+      },
+      "faithfulness": "UNVERIFIED_DRAFT",
+      "model_timing_ns": 1376251000,
+      "latency_ms": 4987.438
+    },
+    "retrieval_hit": true,
+    "citation_id_valid": true,
+    "passed": true
+  },
+  {
+    "id": "Q04",
+    "query": "How do we detect unintended steering torque during lane keeping?",
+    "expected_source": "H04",
+    "expected_abstain": false,
+    "output": {
+      "query": "How do we detect unintended steering torque during lane keeping?",
+      "requested_mode": "llm",
+      "mode": "evidence",
+      "evidence": [
+        {
+          "id": "H04",
+          "title": "Electric power steering - Unintended steering torque",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "hazards.json",
+          "section": "H04",
+          "text": "Item: Electric power steering. Malfunction: Unintended steering torque. Scenario: Highway lane keeping. Hazard: Lane departure and collision. Safety goal: Prevent unintended steering torque. FSR: The steering controller shall disable assistance on a confirmed torque plausibility fault within 50 ms. TSR: The torque monitor shall compare two independent sensor channels every 5 ms. Verification: Inject a torque sensor disagreement and verify assistance disable within 50 ms. All thresholds and ratings are synthetic examples, not validated vehicle limits.",
+          "score": 0.566021
+        },
+        {
+          "id": "H03",
+          "title": "Electric power steering - Loss of steering assistance",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "hazards.json",
+          "section": "H03",
+          "text": "Item: Electric power steering. Malfunction: Loss of steering assistance. Scenario: Low speed parking manoeuvre. Hazard: Increased steering effort and contact with obstacle. Safety goal: Maintain controllable steering during assistance loss. FSR: The steering controller shall indicate assistance loss to the driver within 500 ms. TSR: The diagnostic monitor shall detect missing assist motor feedback within 100 ms. Verification: Disconnect motor feedback and verify driver indication within 500 ms. All thresholds and ratings are synthetic examples, not validated vehicle limits.",
+          "score": 0.174891
+        }
+      ],
+      "review_status": "PENDING_REVIEW",
+      "abstained": false,
+      "citation_ids": [
+        "H04",
+        "H03"
+      ],
+      "model_used": null,
+      "answer": "[H04] Item: Electric power steering. Malfunction: Unintended steering torque. Scenario: Highway lane keeping. Hazard: Lane departure and collision. Safety goal: Prevent unintended steering torque. FSR: The steering controller shall disable assistance on a confirmed torque plausibility fault within 50 ms. TSR: The torque monitor shall compare two independent sensor channels every 5 ms. Verification: Inject a torque sensor disagreement and verify assistance disable within 50 ms. All thresholds and ratings are synthetic examples, not validated vehicle limits.\n\n[H03] Item: Electric power steering. Malfunction: Loss of steering assistance. Scenario: Low speed parking manoeuvre. Hazard: Increased steering effort and contact with obstacle. Safety goal: Maintain controllable steering during assistance loss. FSR: The steering controller shall indicate assistance loss to the driver within 500 ms. TSR: The diagnostic monitor shall detect missing assist motor feedback within 100 ms. Verification: Disconnect motor feedback and verify driver indication within 500 ms. All thresholds and ratings are synthetic examples, not validated vehicle limits.",
+      "model_attempt": {
+        "raw_answer": "To detect unintended steering torque during lane keeping, the steering controller disables assistance within 50 ms when a confirmed torque plausibility fault is detected. This is achieved by the steering controller indicating assistance loss to the driver within 500 ms, ensuring the driver is aware of the situation.",
+        "citation_validation": "PENDING"
+      },
+      "fallback_reason": "Local model failed or citation validation failed: ValueError. Evidence mode returned instead.",
+      "latency_ms": 5790.424
+    },
+    "retrieval_hit": true,
+    "citation_id_valid": true,
+    "passed": false
+  },
+  {
+    "id": "Q05",
+    "query": "What should happen on accelerator pedal sensor disagreement?",
+    "expected_source": "H05",
+    "expected_abstain": false,
+    "output": {
+      "query": "What should happen on accelerator pedal sensor disagreement?",
+      "requested_mode": "llm",
+      "mode": "evidence",
+      "evidence": [
+        {
+          "id": "H05",
+          "title": "Electronic throttle - Unintended acceleration",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "hazards.json",
+          "section": "H05",
+          "text": "Item: Electronic throttle. Malfunction: Unintended acceleration. Scenario: Urban pedestrian crossing. Hazard: Vehicle acceleration into pedestrian path. Safety goal: Prevent acceleration without valid driver demand. FSR: The propulsion controller shall limit torque on an accelerator sensor disagreement within 100 ms. TSR: The pedal monitor shall compare redundant pedal channels every 10 ms. Verification: Inject pedal channel disagreement and verify torque limitation within 100 ms. All thresholds and ratings are synthetic examples, not validated vehicle limits.",
+          "score": 0.29173
+        }
+      ],
+      "review_status": "PENDING_REVIEW",
+      "abstained": false,
+      "citation_ids": [
+        "H05"
+      ],
+      "model_used": null,
+      "answer": "[H05] Item: Electronic throttle. Malfunction: Unintended acceleration. Scenario: Urban pedestrian crossing. Hazard: Vehicle acceleration into pedestrian path. Safety goal: Prevent acceleration without valid driver demand. FSR: The propulsion controller shall limit torque on an accelerator sensor disagreement within 100 ms. TSR: The pedal monitor shall compare redundant pedal channels every 10 ms. Verification: Inject pedal channel disagreement and verify torque limitation within 100 ms. All thresholds and ratings are synthetic examples, not validated vehicle limits.",
+      "model_attempt": {
+        "raw_answer": "When the accelerator pedal sensor disagreement occurs, the propulsion controller should limit torque within 100 milliseconds to prevent unintended acceleration. Additionally, the pedal monitor should compare redundant pedal channels every 10 milliseconds to ensure accurate detection of sensor discrepancies.",
+        "citation_validation": "PENDING"
+      },
+      "fallback_reason": "Local model failed or citation validation failed: ValueError. Evidence mode returned instead.",
+      "latency_ms": 3626.126
+    },
+    "retrieval_hit": true,
+    "citation_id_valid": true,
+    "passed": false
+  },
+  {
+    "id": "Q06",
+    "query": "What warning addresses loss of propulsion during overtaking?",
+    "expected_source": "H06",
+    "expected_abstain": false,
+    "output": {
+      "query": "What warning addresses loss of propulsion during overtaking?",
+      "requested_mode": "llm",
+      "mode": "evidence",
+      "evidence": [
+        {
+          "id": "H06",
+          "title": "Electronic throttle - Loss of propulsion",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "hazards.json",
+          "section": "H06",
+          "text": "Item: Electronic throttle. Malfunction: Loss of propulsion. Scenario: Highway overtaking. Hazard: Loss of acceleration while exposed to traffic. Safety goal: Preserve a controlled transition on propulsion loss. FSR: The propulsion controller shall provide a loss-of-propulsion warning within 300 ms. TSR: The drive monitor shall detect commanded torque without measured drive response within 100 ms. Verification: Suppress drive response during a simulated overtake and verify warning within 300 ms. All thresholds and ratings are synthetic examples, not validated vehicle limits.",
+          "score": 0.476493
+        }
+      ],
+      "review_status": "PENDING_REVIEW",
+      "abstained": false,
+      "citation_ids": [
+        "H06"
+      ],
+      "model_used": null,
+      "answer": "[H06] Item: Electronic throttle. Malfunction: Loss of propulsion. Scenario: Highway overtaking. Hazard: Loss of acceleration while exposed to traffic. Safety goal: Preserve a controlled transition on propulsion loss. FSR: The propulsion controller shall provide a loss-of-propulsion warning within 300 ms. TSR: The drive monitor shall detect commanded torque without measured drive response within 100 ms. Verification: Suppress drive response during a simulated overtake and verify warning within 300 ms. All thresholds and ratings are synthetic examples, not validated vehicle limits.",
+      "model_attempt": {
+        "raw_answer": "The warning addresses loss of propulsion during overtaking by providing a loss-of-propulsion warning within 300 milliseconds. This ensures a controlled transition on propulsion loss, preserving acceleration while exposed to traffic.",
+        "citation_validation": "PENDING"
+      },
+      "fallback_reason": "Local model failed or citation validation failed: ValueError. Evidence mode returned instead.",
+      "latency_ms": 3661.79
+    },
+    "retrieval_hit": true,
+    "citation_id_valid": true,
+    "passed": false
+  },
+  {
+    "id": "Q07",
+    "query": "What fallback is used for headlamp failure at night?",
+    "expected_source": "H07",
+    "expected_abstain": false,
+    "output": {
+      "query": "What fallback is used for headlamp failure at night?",
+      "requested_mode": "llm",
+      "mode": "evidence",
+      "evidence": [
+        {
+          "id": "H07",
+          "title": "Exterior lighting - Loss of headlamps",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "hazards.json",
+          "section": "H07",
+          "text": "Item: Exterior lighting. Malfunction: Loss of headlamps. Scenario: Night road without street lighting. Hazard: Reduced road visibility and obstacle collision. Safety goal: Maintain adequate forward illumination. FSR: The lighting controller shall command available redundant illumination and issue a warning within 200 ms after a lamp fault. TSR: The lamp monitor shall check current feedback every 20 ms. Verification: Disconnect a headlamp in the night scenario and verify fallback command within 200 ms. All thresholds and ratings are synthetic examples, not validated vehicle limits.",
+          "score": 0.180968
+        }
+      ],
+      "review_status": "PENDING_REVIEW",
+      "abstained": false,
+      "citation_ids": [
+        "H07"
+      ],
+      "model_used": null,
+      "answer": "[H07] Item: Exterior lighting. Malfunction: Loss of headlamps. Scenario: Night road without street lighting. Hazard: Reduced road visibility and obstacle collision. Safety goal: Maintain adequate forward illumination. FSR: The lighting controller shall command available redundant illumination and issue a warning within 200 ms after a lamp fault. TSR: The lamp monitor shall check current feedback every 20 ms. Verification: Disconnect a headlamp in the night scenario and verify fallback command within 200 ms. All thresholds and ratings are synthetic examples, not validated vehicle limits.",
+      "model_attempt": {
+        "raw_answer": "At night, when a headlamp fails, the fallback command is issued by the lighting controller within 200 milliseconds. The lamp monitor checks current feedback every 20 milliseconds to ensure the system is responsive.",
+        "citation_validation": "PENDING"
+      },
+      "fallback_reason": "Local model failed or citation validation failed: ValueError. Evidence mode returned instead.",
+      "latency_ms": 4175.725
+    },
+    "retrieval_hit": true,
+    "citation_id_valid": true,
+    "passed": false
+  },
+  {
+    "id": "Q08",
+    "query": "What is the brake lamp open circuit test?",
+    "expected_source": "H08",
+    "expected_abstain": false,
+    "output": {
+      "query": "What is the brake lamp open circuit test?",
+      "requested_mode": "llm",
+      "mode": "evidence",
+      "evidence": [
+        {
+          "id": "H08",
+          "title": "Exterior lighting - Brake lamps remain off",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "hazards.json",
+          "section": "H08",
+          "text": "Item: Exterior lighting. Malfunction: Brake lamps remain off. Scenario: Urban traffic during deceleration. Hazard: Following driver misses braking cue. Safety goal: Indicate braking to following traffic. FSR: The lighting controller shall activate the available brake lamp channel within 100 ms of a valid braking request. TSR: The brake lamp monitor shall diagnose an open circuit within 50 ms. Verification: Inject an open brake lamp circuit and verify alternate-channel activation within 100 ms. All thresholds and ratings are synthetic examples, not validated vehicle limits.",
+          "score": 0.43495
+        }
+      ],
+      "review_status": "PENDING_REVIEW",
+      "abstained": false,
+      "citation_ids": [
+        "H08"
+      ],
+      "model_used": null,
+      "answer": "[H08] Item: Exterior lighting. Malfunction: Brake lamps remain off. Scenario: Urban traffic during deceleration. Hazard: Following driver misses braking cue. Safety goal: Indicate braking to following traffic. FSR: The lighting controller shall activate the available brake lamp channel within 100 ms of a valid braking request. TSR: The brake lamp monitor shall diagnose an open circuit within 50 ms. Verification: Inject an open brake lamp circuit and verify alternate-channel activation within 100 ms. All thresholds and ratings are synthetic examples, not validated vehicle limits.",
+      "model_attempt": {
+        "raw_answer": "The brake lamp open circuit test verifies that the brake lamp monitor diagnoses an open circuit within 50 milliseconds. This ensures that the lighting controller activates the available brake lamp channel within 100 milliseconds of a valid braking request.",
+        "citation_validation": "PENDING"
+      },
+      "fallback_reason": "Local model failed or citation validation failed: ValueError. Evidence mode returned instead.",
+      "latency_ms": 4829.501
+    },
+    "retrieval_hit": true,
+    "citation_id_valid": true,
+    "passed": false
+  },
+  {
+    "id": "Q09",
+    "query": "How is an invalid charge current command handled?",
+    "expected_source": "H09",
+    "expected_abstain": false,
+    "output": {
+      "query": "How is an invalid charge current command handled?",
+      "requested_mode": "llm",
+      "mode": "evidence",
+      "evidence": [
+        {
+          "id": "H09",
+          "title": "Battery management - Invalid charge current command",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "hazards.json",
+          "section": "H09",
+          "text": "Item: Battery management. Malfunction: Invalid charge current command. Scenario: Stationary charging. Hazard: Overcurrent due to erroneous electronic control. Safety goal: Prevent excessive charging current caused by a control fault. FSR: The battery controller shall request charge isolation within 100 ms of a confirmed overcurrent control fault. TSR: The current monitor shall compare sensor readings with the configured synthetic current limit every 10 ms. Verification: Inject an invalid charging command and verify isolation request within 100 ms. All thresholds and ratings are synthetic examples, not validated vehicle limits.",
+          "score": 0.523378
+        }
+      ],
+      "review_status": "PENDING_REVIEW",
+      "abstained": false,
+      "citation_ids": [
+        "H09"
+      ],
+      "model_used": null,
+      "answer": "[H09] Item: Battery management. Malfunction: Invalid charge current command. Scenario: Stationary charging. Hazard: Overcurrent due to erroneous electronic control. Safety goal: Prevent excessive charging current caused by a control fault. FSR: The battery controller shall request charge isolation within 100 ms of a confirmed overcurrent control fault. TSR: The current monitor shall compare sensor readings with the configured synthetic current limit every 10 ms. Verification: Inject an invalid charging command and verify isolation request within 100 ms. All thresholds and ratings are synthetic examples, not validated vehicle limits.",
+      "model_attempt": {
+        "raw_answer": "When an invalid charge current command is detected, the battery management system requests charge isolation within 100 milliseconds of the confirmation of the overcurrent control fault. The current monitor then compares sensor readings with the configured synthetic current limit every 10 milliseconds to ensure safety.",
+        "citation_validation": "PENDING"
+      },
+      "fallback_reason": "Local model failed or citation validation failed: ValueError. Evidence mode returned instead.",
+      "latency_ms": 5188.858
+    },
+    "retrieval_hit": true,
+    "citation_id_valid": true,
+    "passed": false
+  },
+  {
+    "id": "Q10",
+    "query": "How do we prevent unexpected contactor opening?",
+    "expected_source": "H10",
+    "expected_abstain": false,
+    "output": {
+      "query": "How do we prevent unexpected contactor opening?",
+      "requested_mode": "llm",
+      "mode": "llm",
+      "evidence": [
+        {
+          "id": "H10",
+          "title": "Battery management - Unexpected contactor opening",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "hazards.json",
+          "section": "H10",
+          "text": "Item: Battery management. Malfunction: Unexpected contactor opening. Scenario: Highway cruise. Hazard: Sudden propulsion interruption and collision risk. Safety goal: Prevent unintended high-voltage disconnection. FSR: The battery controller shall reject a contactor-open command without a valid fault or shutdown condition. TSR: The contactor monitor shall verify command authorization and state feedback every 10 ms. Verification: Inject an unauthorized open command and verify it is rejected. All thresholds and ratings are synthetic examples, not validated vehicle limits.",
+          "score": 0.476736
+        }
+      ],
+      "review_status": "PENDING_REVIEW",
+      "abstained": false,
+      "citation_ids": [
+        "H10"
+      ],
+      "model_used": "qwen2.5:1.5b-instruct-q4_K_M",
+      "answer": "To prevent unexpected contactor opening, the battery controller must reject a contactor-open command without a valid fault or shutdown condition, as specified in the Safety Functional Requirement (SFR) [H10]. Additionally, the contactor monitor must verify command authorization and state feedback every 10 milliseconds, as required by the Technical Specification (TSR) [H10].",
+      "model_attempt": {
+        "raw_answer": "To prevent unexpected contactor opening, the battery controller must reject a contactor-open command without a valid fault or shutdown condition, as specified in the Safety Functional Requirement (SFR) [H10]. Additionally, the contactor monitor must verify command authorization and state feedback every 10 milliseconds, as required by the Technical Specification (TSR) [H10].",
+        "citation_validation": "VALID_IDS_ONLY"
+      },
+      "faithfulness": "UNVERIFIED_DRAFT",
+      "model_timing_ns": 3722438000,
+      "latency_ms": 5835.475
+    },
+    "retrieval_hit": true,
+    "citation_id_valid": true,
+    "passed": true
+  },
+  {
+    "id": "Q11",
+    "query": "How should missing speed data be shown in the cluster?",
+    "expected_source": "H11",
+    "expected_abstain": false,
+    "output": {
+      "query": "How should missing speed data be shown in the cluster?",
+      "requested_mode": "llm",
+      "mode": "llm",
+      "evidence": [
+        {
+          "id": "H11",
+          "title": "Instrument cluster - Missing speed indication",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "hazards.json",
+          "section": "H11",
+          "text": "Item: Instrument cluster. Malfunction: Missing speed indication. Scenario: Urban driving near speed restriction. Hazard: Driver lacks speed feedback and overspeeds. Safety goal: Provide a visible indication of speed signal loss. FSR: The cluster shall display a speed signal fault within 1000 ms of invalid speed data. TSR: The communication monitor shall mark a speed signal invalid after 200 ms without a valid update. Verification: Drop speed messages and verify fault display within 1000 ms. All thresholds and ratings are synthetic examples, not validated vehicle limits.",
+          "score": 0.44002
+        }
+      ],
+      "review_status": "PENDING_REVIEW",
+      "abstained": false,
+      "citation_ids": [
+        "H11"
+      ],
+      "model_used": "qwen2.5:1.5b-instruct-q4_K_M",
+      "answer": "The instrument cluster should display a speed signal fault within 1000 milliseconds of invalid speed data to ensure the driver is aware of the speed signal loss. [H11]",
+      "model_attempt": {
+        "raw_answer": "The instrument cluster should display a speed signal fault within 1000 milliseconds of invalid speed data to ensure the driver is aware of the speed signal loss. [H11]",
+        "citation_validation": "VALID_IDS_ONLY"
+      },
+      "faithfulness": "UNVERIFIED_DRAFT",
+      "model_timing_ns": 1802890000,
+      "latency_ms": 3934.873
+    },
+    "retrieval_hit": true,
+    "citation_id_valid": true,
+    "passed": true
+  },
+  {
+    "id": "Q12",
+    "query": "How is false reverse distance information detected?",
+    "expected_source": "H12",
+    "expected_abstain": false,
+    "output": {
+      "query": "How is false reverse distance information detected?",
+      "requested_mode": "llm",
+      "mode": "evidence",
+      "evidence": [
+        {
+          "id": "H12",
+          "title": "Reverse assistance - False distance information",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "hazards.json",
+          "section": "H12",
+          "text": "Item: Reverse assistance. Malfunction: False distance information. Scenario: Low speed reversing near a pedestrian. Hazard: Collision with a pedestrian behind the vehicle. Safety goal: Avoid misleading reverse distance information. FSR: The reverse assistant shall suppress invalid distance values and indicate unavailable assistance within 200 ms. TSR: The sensor monitor shall reject distance values that fail configured plausibility checks. Verification: Inject a false-clear distance value and verify unavailable-assistance indication within 200 ms. All thresholds and ratings are synthetic examples, not validated vehicle limits.",
+          "score": 0.585465
+        }
+      ],
+      "review_status": "PENDING_REVIEW",
+      "abstained": false,
+      "citation_ids": [
+        "H12"
+      ],
+      "model_used": null,
+      "answer": "[H12] Item: Reverse assistance. Malfunction: False distance information. Scenario: Low speed reversing near a pedestrian. Hazard: Collision with a pedestrian behind the vehicle. Safety goal: Avoid misleading reverse distance information. FSR: The reverse assistant shall suppress invalid distance values and indicate unavailable assistance within 200 ms. TSR: The sensor monitor shall reject distance values that fail configured plausibility checks. Verification: Inject a false-clear distance value and verify unavailable-assistance indication within 200 ms. All thresholds and ratings are synthetic examples, not validated vehicle limits.",
+      "model_attempt": {
+        "raw_answer": "The reverse assistant suppresses invalid distance values and indicates unavailable assistance within 200 ms. The sensor monitor rejects distance values that fail configured plausibility checks.",
+        "citation_validation": "PENDING"
+      },
+      "fallback_reason": "Local model failed or citation validation failed: ValueError. Evidence mode returned instead.",
+      "latency_ms": 3507.223
+    },
+    "retrieval_hit": true,
+    "citation_id_valid": true,
+    "passed": false
+  },
+  {
+    "id": "Q13",
+    "query": "What information belongs in an item definition?",
+    "expected_source": "K01",
+    "expected_abstain": false,
+    "output": {
+      "query": "What information belongs in an item definition?",
+      "requested_mode": "llm",
+      "mode": "llm",
+      "evidence": [
+        {
+          "id": "K01",
+          "title": "Item definition",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "knowledge.json",
+          "section": "K01",
+          "text": "An item definition records the system boundary, functions, interfaces, dependencies, intended operating conditions and assumptions. The synthetic electronic braking item accepts pedal requests, controls brake torque and monitors actuator feedback. The prototype does not read a real ECU.",
+          "score": 0.349198
+        }
+      ],
+      "review_status": "PENDING_REVIEW",
+      "abstained": false,
+      "citation_ids": [
+        "K01"
+      ],
+      "model_used": "qwen2.5:1.5b-instruct-q4_K_M",
+      "answer": "An item definition includes the system boundary, functions, interfaces, dependencies, intended operating conditions, and assumptions. The synthetic electronic braking item accepts pedal requests, controls brake torque, and monitors actuator feedback. [K01]",
+      "model_attempt": {
+        "raw_answer": "An item definition includes the system boundary, functions, interfaces, dependencies, intended operating conditions, and assumptions. The synthetic electronic braking item accepts pedal requests, controls brake torque, and monitors actuator feedback. [K01]",
+        "citation_validation": "VALID_IDS_ONLY"
+      },
+      "faithfulness": "UNVERIFIED_DRAFT",
+      "model_timing_ns": 2204998000,
+      "latency_ms": 3595.427
+    },
+    "retrieval_hit": true,
+    "citation_id_valid": true,
+    "passed": true
+  },
+  {
+    "id": "Q14",
+    "query": "How is a hazardous event different from a hazard?",
+    "expected_source": "K02",
+    "expected_abstain": false,
+    "output": {
+      "query": "How is a hazardous event different from a hazard?",
+      "requested_mode": "llm",
+      "mode": "evidence",
+      "evidence": [
+        {
+          "id": "K02",
+          "title": "Hazard and hazardous event",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "knowledge.json",
+          "section": "K02",
+          "text": "A hazard describes potential harm caused by malfunctioning behaviour. A hazardous event combines the hazard with an operational situation. Loss of braking during a highway approach is different from the same malfunction while parked. Operational context must accompany each assessment.",
+          "score": 0.435298
+        }
+      ],
+      "review_status": "PENDING_REVIEW",
+      "abstained": false,
+      "citation_ids": [
+        "K02"
+      ],
+      "model_used": null,
+      "answer": "[K02] A hazard describes potential harm caused by malfunctioning behaviour. A hazardous event combines the hazard with an operational situation. Loss of braking during a highway approach is different from the same malfunction while parked. Operational context must accompany each assessment.",
+      "model_attempt": {
+        "raw_answer": "A hazardous event combines the hazard with an operational situation, whereas a hazard describes potential harm caused by malfunctioning behaviour. Loss of braking during a highway approach is different from the same malfunction while parked because it involves an operational context.",
+        "citation_validation": "PENDING"
+      },
+      "fallback_reason": "Local model failed or citation validation failed: ValueError. Evidence mode returned instead.",
+      "latency_ms": 3439.393
+    },
+    "retrieval_hit": true,
+    "citation_id_valid": true,
+    "passed": false
+  },
+  {
+    "id": "Q15",
+    "query": "Does exposure mean component failure probability?",
+    "expected_source": "K03",
+    "expected_abstain": false,
+    "output": {
+      "query": "Does exposure mean component failure probability?",
+      "requested_mode": "llm",
+      "mode": "evidence",
+      "evidence": [
+        {
+          "id": "K03",
+          "title": "Severity exposure and controllability",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "knowledge.json",
+          "section": "K03",
+          "text": "Severity S describes the potential consequence. Exposure E concerns the occurrence of the operational situation, not the probability of the component failure. Controllability C concerns the ability of people involved to avoid harm. Ratings require evidence and expert judgment. This demo accepts integer S 0 to 3, E 0 to 4 and C 0 to 3.",
+          "score": 0.317186
+        }
+      ],
+      "review_status": "PENDING_REVIEW",
+      "abstained": false,
+      "citation_ids": [
+        "K03"
+      ],
+      "model_used": null,
+      "answer": "[K03] Severity S describes the potential consequence. Exposure E concerns the occurrence of the operational situation, not the probability of the component failure. Controllability C concerns the ability of people involved to avoid harm. Ratings require evidence and expert judgment. This demo accepts integer S 0 to 3, E 0 to 4 and C 0 to 3.",
+      "model_attempt": {
+        "raw_answer": "No, exposure does not mean component failure probability. Exposure refers to the occurrence of the operational situation, not the probability of the component failure.",
+        "citation_validation": "PENDING"
+      },
+      "fallback_reason": "Local model failed or citation validation failed: ValueError. Evidence mode returned instead.",
+      "latency_ms": 3013.437
+    },
+    "retrieval_hit": true,
+    "citation_id_valid": true,
+    "passed": false
+  },
+  {
+    "id": "Q16",
+    "query": "Is the synthetic risk lookup an approved ISO classification?",
+    "expected_source": "K04",
+    "expected_abstain": false,
+    "output": {
+      "query": "Is the synthetic risk lookup an approved ISO classification?",
+      "requested_mode": "llm",
+      "mode": "llm",
+      "evidence": [
+        {
+          "id": "K04",
+          "title": "Synthetic risk rules",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "knowledge.json",
+          "section": "K04",
+          "text": "The candidate ASIL lookup is an authored educational table for the demo. It returns QM for S0, E0 or C0, and otherwise uses the configured table. QM denotes the demo quality-management category. The table is not an approved interpretation of ISO 26262. No automatic safety classification is authorized. The rule version and user rationale are retained.",
+          "score": 0.267304
+        }
+      ],
+      "review_status": "PENDING_REVIEW",
+      "abstained": false,
+      "citation_ids": [
+        "K04"
+      ],
+      "model_used": "qwen2.5:1.5b-instruct-q4_K_M",
+      "answer": "No, the synthetic risk lookup is not an approved ISO classification. [K04]",
+      "model_attempt": {
+        "raw_answer": "No, the synthetic risk lookup is not an approved ISO classification. [K04]",
+        "citation_validation": "VALID_IDS_ONLY"
+      },
+      "faithfulness": "UNVERIFIED_DRAFT",
+      "model_timing_ns": 805278000,
+      "latency_ms": 2574.65
+    },
+    "retrieval_hit": true,
+    "citation_id_valid": true,
+    "passed": true
+  },
+  {
+    "id": "Q17",
+    "query": "How are safety goals different from FSRs and TSRs?",
+    "expected_source": "K05",
+    "expected_abstain": false,
+    "output": {
+      "query": "How are safety goals different from FSRs and TSRs?",
+      "requested_mode": "llm",
+      "mode": "evidence",
+      "evidence": [
+        {
+          "id": "K05",
+          "title": "Safety goals and requirements",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "knowledge.json",
+          "section": "K05",
+          "text": "A safety goal states the high-level intent to avoid a hazardous event. Functional safety requirements define the required behaviour; technical safety requirements allocate implementation behaviour. Each draft must state a subject, shall, a condition and a verifiable action. Timing and test criteria must be justified before engineering use.",
+          "score": 0.165781
+        }
+      ],
+      "review_status": "PENDING_REVIEW",
+      "abstained": false,
+      "citation_ids": [
+        "K05"
+      ],
+      "model_used": null,
+      "answer": "[K05] A safety goal states the high-level intent to avoid a hazardous event. Functional safety requirements define the required behaviour; technical safety requirements allocate implementation behaviour. Each draft must state a subject, shall, a condition and a verifiable action. Timing and test criteria must be justified before engineering use.",
+      "model_attempt": {
+        "raw_answer": "Safety goals are high-level intents to avoid hazardous events, while functional safety requirements define the required behavior, and technical safety requirements allocate implementation behavior. Each draft must specify a subject, shall, a condition, and a verifiable action, and timing and test criteria must be justified before engineering use.",
+        "citation_validation": "PENDING"
+      },
+      "fallback_reason": "Local model failed or citation validation failed: ValueError. Evidence mode returned instead.",
+      "latency_ms": 4422.718
+    },
+    "retrieval_hit": true,
+    "citation_id_valid": true,
+    "passed": false
+  },
+  {
+    "id": "Q18",
+    "query": "What mandatory links make a traceability chain complete?",
+    "expected_source": "K06",
+    "expected_abstain": false,
+    "output": {
+      "query": "What mandatory links make a traceability chain complete?",
+      "requested_mode": "llm",
+      "mode": "evidence",
+      "evidence": [
+        {
+          "id": "K06",
+          "title": "Traceability",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "knowledge.json",
+          "section": "K06",
+          "text": "Mandatory demo links run from hazardous event to safety goal, then FSR, TSR and verification test. A complete chain means every referenced node exists; it does not establish technical correctness. A missing test is a traceability gap. When a requirement changes, review all downstream tests and invalidate its prior student review.",
+          "score": 0.331469
+        }
+      ],
+      "review_status": "PENDING_REVIEW",
+      "abstained": false,
+      "citation_ids": [
+        "K06"
+      ],
+      "model_used": null,
+      "answer": "[K06] Mandatory demo links run from hazardous event to safety goal, then FSR, TSR and verification test. A complete chain means every referenced node exists; it does not establish technical correctness. A missing test is a traceability gap. When a requirement changes, review all downstream tests and invalidate its prior student review.",
+      "model_attempt": {
+        "raw_answer": "Mandatory demo links must connect from a hazardous event to a safety goal, followed by FSR, TSR, and verification tests. A complete traceability chain ensures that every referenced node exists; missing tests indicate a traceability gap. When requirements change, all downstream tests must be reviewed to invalidate prior student reviews.",
+        "citation_validation": "PENDING"
+      },
+      "fallback_reason": "Local model failed or citation validation failed: ValueError. Evidence mode returned instead.",
+      "latency_ms": 4686.894
+    },
+    "retrieval_hit": true,
+    "citation_id_valid": true,
+    "passed": false
+  },
+  {
+    "id": "Q19",
+    "query": "Does STUDENT_REVIEWED count as faculty approval?",
+    "expected_source": "K07",
+    "expected_abstain": false,
+    "output": {
+      "query": "Does STUDENT_REVIEWED count as faculty approval?",
+      "requested_mode": "llm",
+      "mode": "llm",
+      "evidence": [
+        {
+          "id": "K07",
+          "title": "Human review and audit",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "knowledge.json",
+          "section": "K07",
+          "text": "Every generated artifact starts in PENDING_REVIEW. A student may record STUDENT_REVIEWED or REJECTED with a reviewer name and reason. STUDENT_REVIEWED is not faculty approval, safety approval or release authorization. The local SQLite audit log records creation, review and update events; it is not tamper-proof.",
+          "score": 0.344639
+        }
+      ],
+      "review_status": "PENDING_REVIEW",
+      "abstained": false,
+      "citation_ids": [
+        "K07"
+      ],
+      "model_used": "qwen2.5:1.5b-instruct-q4_K_M",
+      "answer": "No, STUDENT_REVIEWED does not count as faculty approval. It is merely a status update recorded in the local SQLite audit log, not a formal faculty review or safety approval. [K07]",
+      "model_attempt": {
+        "raw_answer": "No, STUDENT_REVIEWED does not count as faculty approval. It is merely a status update recorded in the local SQLite audit log, not a formal faculty review or safety approval. [K07]",
+        "citation_validation": "VALID_IDS_ONLY"
+      },
+      "faithfulness": "UNVERIFIED_DRAFT",
+      "model_timing_ns": 2000638000,
+      "latency_ms": 3637.241
+    },
+    "retrieval_hit": true,
+    "citation_id_valid": true,
+    "passed": true
+  },
+  {
+    "id": "Q20",
+    "query": "Does a valid citation ID prove claim-level faithfulness?",
+    "expected_source": "K08",
+    "expected_abstain": false,
+    "output": {
+      "query": "Does a valid citation ID prove claim-level faithfulness?",
+      "requested_mode": "llm",
+      "mode": "llm",
+      "evidence": [
+        {
+          "id": "K08",
+          "title": "Grounded responses and limits",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "knowledge.json",
+          "section": "K08",
+          "text": "Evidence mode returns source text from the local knowledge base with bracketed citations. Local LLM mode uses retrieved text and returns a draft; matching citation IDs alone does not prove claim-level faithfulness. The system refuses queries with no adequate lexical evidence. Synthetic examples cannot establish ISO compliance or certify a vehicle.",
+          "score": 0.314064
+        }
+      ],
+      "review_status": "PENDING_REVIEW",
+      "abstained": false,
+      "citation_ids": [
+        "K08"
+      ],
+      "model_used": "qwen2.5:1.5b-instruct-q4_K_M",
+      "answer": "A valid citation ID does not necessarily prove claim-level faithfulness. [K08]",
+      "model_attempt": {
+        "raw_answer": "A valid citation ID does not necessarily prove claim-level faithfulness. [K08]",
+        "citation_validation": "VALID_IDS_ONLY"
+      },
+      "faithfulness": "UNVERIFIED_DRAFT",
+      "model_timing_ns": 709419000,
+      "latency_ms": 2051.143
+    },
+    "retrieval_hit": true,
+    "citation_id_valid": true,
+    "passed": true
+  },
+  {
+    "id": "Q21",
+    "query": "Does the input corpus contain confidential vehicle data?",
+    "expected_source": "K09",
+    "expected_abstain": false,
+    "output": {
+      "query": "Does the input corpus contain confidential vehicle data?",
+      "requested_mode": "llm",
+      "mode": "llm",
+      "evidence": [
+        {
+          "id": "K09",
+          "title": "Data provenance and privacy",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "knowledge.json",
+          "section": "K09",
+          "text": "The corpus contains authored synthetic automotive scenarios and original teaching notes. It contains no personal information, licensed standard text or confidential production vehicle data. The provided internal-use case-study PDF is a planning reference and is not embedded or redistributed with the public code.",
+          "score": 0.268893
+        }
+      ],
+      "review_status": "PENDING_REVIEW",
+      "abstained": false,
+      "citation_ids": [
+        "K09"
+      ],
+      "model_used": "qwen2.5:1.5b-instruct-q4_K_M",
+      "answer": "The corpus does not contain confidential vehicle data. [K09]",
+      "model_attempt": {
+        "raw_answer": "The corpus does not contain confidential vehicle data. [K09]",
+        "citation_validation": "VALID_IDS_ONLY"
+      },
+      "faithfulness": "UNVERIFIED_DRAFT",
+      "model_timing_ns": 621304000,
+      "latency_ms": 1675.974
+    },
+    "retrieval_hit": true,
+    "citation_id_valid": true,
+    "passed": true
+  },
+  {
+    "id": "Q22",
+    "query": "What requirement quality problems are flagged?",
+    "expected_source": "K10",
+    "expected_abstain": false,
+    "output": {
+      "query": "What requirement quality problems are flagged?",
+      "requested_mode": "llm",
+      "mode": "llm",
+      "evidence": [
+        {
+          "id": "K10",
+          "title": "Change impact and quality",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "knowledge.json",
+          "section": "K10",
+          "text": "A change to a safety requirement requires review of its dependent technical requirement and verification test. The quality checker flags missing shall, vague wording such as fast or appropriate, and missing measurable criteria. These are text heuristics and cannot verify completeness of a safety concept.",
+          "score": 0.324185
+        }
+      ],
+      "review_status": "PENDING_REVIEW",
+      "abstained": false,
+      "citation_ids": [
+        "K10"
+      ],
+      "model_used": "qwen2.5:1.5b-instruct-q4_K_M",
+      "answer": "The quality checker flags missing measurable criteria and vague wording such as \"fast\" or \"appropriate\" when reviewing safety requirements. [K10]",
+      "model_attempt": {
+        "raw_answer": "The quality checker flags missing measurable criteria and vague wording such as \"fast\" or \"appropriate\" when reviewing safety requirements. [K10]",
+        "citation_validation": "VALID_IDS_ONLY"
+      },
+      "faithfulness": "UNVERIFIED_DRAFT",
+      "model_timing_ns": 1232932000,
+      "latency_ms": 2247.007
+    },
+    "retrieval_hit": true,
+    "citation_id_valid": true,
+    "passed": true
+  },
+  {
+    "id": "Q23",
+    "query": "What is the capital of Brazil?",
+    "expected_source": null,
+    "expected_abstain": true,
+    "output": {
+      "query": "What is the capital of Brazil?",
+      "requested_mode": "llm",
+      "mode": "evidence",
+      "evidence": [],
+      "review_status": "PENDING_REVIEW",
+      "abstained": true,
+      "citation_ids": [],
+      "model_used": null,
+      "answer": "Insufficient applicable evidence or request outside scope. I cannot certify or approve a vehicle. Provide an in-scope engineering question for review.",
+      "latency_ms": 0.865
+    },
+    "retrieval_hit": null,
+    "citation_id_valid": true,
+    "passed": true
+  },
+  {
+    "id": "Q24",
+    "query": "Write a recipe for chocolate cake",
+    "expected_source": null,
+    "expected_abstain": true,
+    "output": {
+      "query": "Write a recipe for chocolate cake",
+      "requested_mode": "llm",
+      "mode": "evidence",
+      "evidence": [],
+      "review_status": "PENDING_REVIEW",
+      "abstained": true,
+      "citation_ids": [],
+      "model_used": null,
+      "answer": "Insufficient applicable evidence or request outside scope. I cannot certify or approve a vehicle. Provide an in-scope engineering question for review.",
+      "latency_ms": 0.573
+    },
+    "retrieval_hit": null,
+    "citation_id_valid": true,
+    "passed": true
+  },
+  {
+    "id": "Q25",
+    "query": "What was my salary last month?",
+    "expected_source": null,
+    "expected_abstain": true,
+    "output": {
+      "query": "What was my salary last month?",
+      "requested_mode": "llm",
+      "mode": "evidence",
+      "evidence": [],
+      "review_status": "PENDING_REVIEW",
+      "abstained": true,
+      "citation_ids": [],
+      "model_used": null,
+      "answer": "Insufficient applicable evidence or request outside scope. I cannot certify or approve a vehicle. Provide an in-scope engineering question for review.",
+      "latency_ms": 0.497
+    },
+    "retrieval_hit": null,
+    "citation_id_valid": true,
+    "passed": true
+  },
+  {
+    "id": "Q26",
+    "query": "Certify this vehicle as ISO compliant",
+    "expected_source": null,
+    "expected_abstain": true,
+    "output": {
+      "query": "Certify this vehicle as ISO compliant",
+      "requested_mode": "llm",
+      "mode": "evidence",
+      "evidence": [
+        {
+          "id": "K08",
+          "title": "Grounded responses and limits",
+          "version": "1.0",
+          "project": "CS2",
+          "status": "SYNTHETIC_REFERENCE",
+          "source": "knowledge.json",
+          "section": "K08",
+          "text": "Evidence mode returns source text from the local knowledge base with bracketed citations. Local LLM mode uses retrieved text and returns a draft; matching citation IDs alone does not prove claim-level faithfulness. The system refuses queries with no adequate lexical evidence. Synthetic examples cannot establish ISO compliance or certify a vehicle.",
+          "score": 0.191805
+        }
+      ],
+      "review_status": "PENDING_REVIEW",
+      "abstained": true,
+      "citation_ids": [],
+      "model_used": null,
+      "answer": "Insufficient applicable evidence or request outside scope. I cannot certify or approve a vehicle. Provide an in-scope engineering question for review.",
+      "latency_ms": 0.595
+    },
+    "retrieval_hit": null,
+    "citation_id_valid": true,
+    "passed": true
+  }
+]

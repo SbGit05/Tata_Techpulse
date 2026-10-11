@@ -1,0 +1,158 @@
+[
+  {
+    "id": "Q01",
+    "query": "What happens when braking torque is lost on a highway approach?",
+    "expected_source": "H01",
+    "expected_abstain": false
+  },
+  {
+    "id": "Q02",
+    "query": "How can the system reject unintended braking requests?",
+    "expected_source": "H02",
+    "expected_abstain": false
+  },
+  {
+    "id": "Q03",
+    "query": "What warning is required for steering assistance loss during parking?",
+    "expected_source": "H03",
+    "expected_abstain": false
+  },
+  {
+    "id": "Q04",
+    "query": "How do we detect unintended steering torque during lane keeping?",
+    "expected_source": "H04",
+    "expected_abstain": false
+  },
+  {
+    "id": "Q05",
+    "query": "What should happen on accelerator pedal sensor disagreement?",
+    "expected_source": "H05",
+    "expected_abstain": false
+  },
+  {
+    "id": "Q06",
+    "query": "What warning addresses loss of propulsion during overtaking?",
+    "expected_source": "H06",
+    "expected_abstain": false
+  },
+  {
+    "id": "Q07",
+    "query": "What fallback is used for headlamp failure at night?",
+    "expected_source": "H07",
+    "expected_abstain": false
+  },
+  {
+    "id": "Q08",
+    "query": "What is the brake lamp open circuit test?",
+    "expected_source": "H08",
+    "expected_abstain": false
+  },
+  {
+    "id": "Q09",
+    "query": "How is an invalid charge current command handled?",
+    "expected_source": "H09",
+    "expected_abstain": false
+  },
+  {
+    "id": "Q10",
+    "query": "How do we prevent unexpected contactor opening?",
+    "expected_source": "H10",
+    "expected_abstain": false
+  },
+  {
+    "id": "Q11",
+    "query": "How should missing speed data be shown in the cluster?",
+    "expected_source": "H11",
+    "expected_abstain": false
+  },
+  {
+    "id": "Q12",
+    "query": "How is false reverse distance information detected?",
+    "expected_source": "H12",
+    "expected_abstain": false
+  },
+  {
+    "id": "Q13",
+    "query": "What information belongs in an item definition?",
+    "expected_source": "K01",
+    "expected_abstain": false
+  },
+  {
+    "id": "Q14",
+    "query": "How is a hazardous event different from a hazard?",
+    "expected_source": "K02",
+    "expected_abstain": false
+  },
+  {
+    "id": "Q15",
+    "query": "Does exposure mean component failure probability?",
+    "expected_source": "K03",
+    "expected_abstain": false
+  },
+  {
+    "id": "Q16",
+    "query": "Is the synthetic risk lookup an approved ISO classification?",
+    "expected_source": "K04",
+    "expected_abstain": false
+  },
+  {
+    "id": "Q17",
+    "query": "How are safety goals different from FSRs and TSRs?",
+    "expected_source": "K05",
+    "expected_abstain": false
+  },
+  {
+    "id": "Q18",
+    "query": "What mandatory links make a traceability chain complete?",
+    "expected_source": "K06",
+    "expected_abstain": false
+  },
+  {
+    "id": "Q19",
+    "query": "Does STUDENT_REVIEWED count as faculty approval?",
+    "expected_source": "K07",
+    "expected_abstain": false
+  },
+  {
+    "id": "Q20",
+    "query": "Does a valid citation ID prove claim-level faithfulness?",
+    "expected_source": "K08",
+    "expected_abstain": false
+  },
+  {
+    "id": "Q21",
+    "query": "Does the input corpus contain confidential vehicle data?",
+    "expected_source": "K09",
+    "expected_abstain": false
+  },
+  {
+    "id": "Q22",
+    "query": "What requirement quality problems are flagged?",
+    "expected_source": "K10",
+    "expected_abstain": false
+  },
+  {
+    "id": "Q23",
+    "query": "What is the capital of Brazil?",
+    "expected_source": null,
+    "expected_abstain": true
+  },
+  {
+    "id": "Q24",
+    "query": "Write a recipe for chocolate cake",
+    "expected_source": null,
+    "expected_abstain": true
+  },
+  {
+    "id": "Q25",
+    "query": "What was my salary last month?",
+    "expected_source": null,
+    "expected_abstain": true
+  },
+  {
+    "id": "Q26",
+    "query": "Certify this vehicle as ISO compliant",
+    "expected_source": null,
+    "expected_abstain": true
+  }
+]
